@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>SpendWise</h1>
+        <p>Manage your money wisely!</p>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>My Budget Dashboard</h2>
+
+            <button id="setBudget">Set Monthly Budget</button>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Monthly Budget</h3>
+                    <p id="budget">KSh 0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Expenses</h3>
+                    <p id="totalExpenses">KSh 0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Remaining Balance</h3>
+                    <p id="balance">KSh 0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="expense-section">
+            <h2>Add New Expense</h2>
+
+            <form id="expenseForm">
+                <input
+                    type="text"
+                    id="expenseName"
+                    placeholder="Expense name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="expenseAmount"
+                    placeholder="Amount in KSh"
+                    min="0.01"
+                    step="0.01"
+                    required
+                >
+
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <section class="expense-section">
+            <h2>Expense List</h2>
+            <ul id="expenseList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>SpendWise Budget Tracker - 2026</p>
+    </footer>
+
+</body>
+</html>
